@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
-        AWS_SECRET_ACCESS_KEY = credentials('')AWS_SECRET_ACCESS_KEY
+        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
     stages {
         // stage('Checkout') {
@@ -15,11 +15,11 @@ pipeline {
         //         sh 'snap install terraform --classic'
         //     }
         // }
-        // stage('Terraform Init') {
-        //     steps {
-        //         sh 'cd git-cicd && terraform init'
-        //     }
-        // }
+        stage('Terraform Init') {
+            steps {
+                sh 'cd git-cicd && terraform init'
+            }
+        }
         stage('cd git-cicd &&  Terraform Plan') {
             steps {
                 sh 'terraform plan '
