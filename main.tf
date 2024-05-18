@@ -4,7 +4,7 @@ provider "aws" {
 }
 terraform {
   backend "s3" {
-    bucket = "devops-backend-zitc"
+    bucket = "devops-backend-maje"
     region = "us-east-1"
   }
 }
