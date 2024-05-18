@@ -17,7 +17,7 @@ pipeline {
         // }
         stage('Terraform Init') {
             steps {
-                sh 'cd git-cicd && terraform init'
+                sh ' terraform init'
             }
         }
         stage('cd git-cicd &&  Terraform Plan') {
