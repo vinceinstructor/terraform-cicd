@@ -2,12 +2,7 @@
 provider "aws" {
   region = "us-east-1"
 }
-terraform {
-  backend "s3" {
-    bucket = "devops-backend-maje"
-    region = "us-east-1"
-  }
-}
+
 
 
 # Create the VPC, subnets, internet gateway, and availability zones
