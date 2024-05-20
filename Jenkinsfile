@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Terraform destroy') {
             steps {
-                sh 'terraform destroy'
+                sh 'terraform destroy -auto-approve'
             }
         }
     }
